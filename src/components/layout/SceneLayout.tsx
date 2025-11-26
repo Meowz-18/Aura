@@ -1,4 +1,5 @@
-import { ReactNode, useRef } from 'react'
+import type { ReactNode } from 'react'
+import { useRef } from 'react'
 import { SkipLink } from './SkipLink'
 import { Header } from './Header'
 import { ProgressBar } from '../ui/ProgressBar'

@@ -1,4 +1,4 @@
-import { HTMLAttributes, PropsWithChildren } from 'react'
+import type { HTMLAttributes, PropsWithChildren } from 'react'
 import clsx from 'classnames'
 
 type GapScale = '2xs' | 'xs' | 'sm' | 'md' | 'lg'
