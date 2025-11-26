@@ -30,12 +30,14 @@ export const CosmicBackdrop = ({ scrollProgress, isMotionReduced }: CosmicBackdr
           count={count}
           array={positions}
           itemSize={3}
+          args={[positions, 3]}
         />
         <bufferAttribute
           attach="attributes-aColor"
           count={count}
           array={colors}
           itemSize={3}
+          args={[colors, 3]}
         />
       </bufferGeometry>
       <shaderMaterial
