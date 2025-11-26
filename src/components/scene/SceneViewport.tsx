@@ -1,4 +1,5 @@
-import { ReactNode, Suspense } from 'react'
+import { Suspense } from 'react'
+import type { ReactNode } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 

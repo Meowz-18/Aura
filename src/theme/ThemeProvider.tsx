@@ -1,17 +1,16 @@
 import {
-  ReactNode,
   createContext,
   useContext,
   useEffect,
   useMemo,
   useState,
 } from 'react'
+import type { ReactNode } from 'react'
 import {
   MOTION_STORAGE_KEY,
   THEME_STORAGE_KEY,
-  MotionSetting,
-  ThemeName,
 } from './theme'
+import type { MotionSetting, ThemeName } from './theme'
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion'
 
 interface ThemeContextValue {
