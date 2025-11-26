@@ -1,5 +1,5 @@
 import { motionTokens, themeOrder, themeTokens } from '../../theme/theme'
-import { MotionSetting } from '../../theme/theme'
+import type { MotionSetting } from '../../theme/theme'
 import { useTheme } from '../../theme/ThemeProvider'
 import { Stack } from '../layout/Primitives'
 

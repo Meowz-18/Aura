@@ -294,6 +294,285 @@ a:hover {
   color: var(--color-muted);
 }
 
+.hero-viewport {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: radial-gradient(ellipse at 50% 0%, rgba(100, 242, 203, 0.15), rgba(4, 6, 11, 0.95));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+}
+
+.hero-viewport--fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.hero-viewport--fallback h1 {
+  font-size: var(--step-4);
+  font-weight: 600;
+  color: var(--color-text);
+  max-width: 28rem;
+}
+
+.hero-viewport--fallback p {
+  color: var(--color-muted);
+  max-width: 24rem;
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--space-xl);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-headline {
+  font-size: var(--step-5);
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: var(--space-lg);
+  max-width: 32rem;
+  text-shadow: 0 4px 24px rgba(6, 8, 15, 0.45);
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-cta {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-strong));
+  color: var(--color-surface);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 8px 32px rgba(100, 242, 203, 0.3);
+  text-decoration: none;
+  font-size: var(--step-0);
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 48px rgba(100, 242, 203, 0.5);
+}
+
+.hero-cta:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.hero-cta:active {
+  transform: translateY(0);
+}
+
+.tooltip {
+  position: fixed;
+  background: color-mix(in srgb, var(--color-elevated) 95%, transparent);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  max-width: 18rem;
+  box-shadow: var(--shadow-soft);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+.tooltip--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tooltip__content {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.tooltip__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.tooltip__title {
+  font-size: var(--step-0);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.tooltip__body {
+  font-size: var(--step--1);
+  color: var(--color-muted);
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+.tooltip__close {
+  background: transparent;
+  border: none;
+  color: var(--color-muted);
+  font-size: var(--step-0);
+  cursor: pointer;
+  padding: 0;
+  min-width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.tooltip__close:hover {
+  color: var(--color-accent);
+}
+
+.tooltip__close:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  border-radius: var(--radius-sm);
+}
+
+.tooltip__arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: color-mix(in srgb, var(--color-elevated) 95%, transparent);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  transform: rotate(45deg);
+}
+
+.onboarding-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.onboarding--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.onboarding-overlay__content {
+  position: relative;
+  z-index: 41;
+}
+
+.onboarding-header {
+  position: fixed;
+  top: var(--space-xl);
+  left: var(--space-xl);
+  right: var(--space-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 42;
+  pointer-events: auto;
+}
+
+.onboarding-header h2 {
+  font-size: var(--step-2);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.onboarding-close-btn {
+  background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-pill);
+  font-size: var(--step--1);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.onboarding-close-btn:hover {
+  background: var(--color-accent);
+  color: var(--color-surface);
+}
+
+.onboarding-close-btn:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+}
+
+.onboarding-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  z-index: 40;
+}
+
+.onboarding-tooltips {
+  position: relative;
+  z-index: 41;
+  pointer-events: auto;
+}
+
+.hero-progress-indicator {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-xs);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.hero-progress-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: background 0.3s ease;
+}
+
+.hero-progress-dot--active {
+  background: var(--color-accent);
+}
+
 @media (max-width: 768px) {
   .app-shell {
     padding: var(--space-sm);
@@ -307,5 +586,23 @@ a:hover {
   .header__meta {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .hero-headline {
+    font-size: var(--step-3);
+  }
+
+  .hero-viewport {
+    height: 70vh;
+  }
+
+  .onboarding-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .tooltip {
+    max-width: 16rem;
   }
 }
