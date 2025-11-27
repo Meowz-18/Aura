@@ -1,0 +1,29 @@
+.knowledge-capsule {
+  display: flex;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.knowledge-capsule__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.knowledge-capsule__title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.knowledge-capsule__text {
+  margin: 0.2rem 0 0;
+  color: rgba(255, 255, 255, 0.7);
+}

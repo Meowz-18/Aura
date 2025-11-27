@@ -1,0 +1,31 @@
+.mood-palette {
+  background: rgba(7, 12, 21, 0.9);
+  border-radius: 24px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mood-palette__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.mood-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: color-mix(in srgb, var(--mood-color), transparent 70%);
+  border-radius: 999px;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--mood-color);
+}
+
+.mood-badge__icon {
+  font-size: 1.4rem;
+}
+
+.mood-badge__label {
+  font-weight: 600;
+  text-transform: capitalize;
+}

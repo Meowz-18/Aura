@@ -1,0 +1,125 @@
+.journal-toggle {
+  position: fixed;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  border: none;
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.journal-toggle__badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #ff5e5e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.journey-journal {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min(420px, 90vw);
+  background: rgba(5, 8, 13, 0.95);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: -20px 0 40px rgba(0, 0, 0, 0.35);
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.journey-journal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.journey-journal__title {
+  margin: 0;
+}
+
+.journey-journal__close {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.journey-journal__empty {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.journey-journal__list {
+  display: grid;
+  gap: 1rem;
+}
+
+.journal-entry {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  gap: 0.8rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 0.6rem;
+}
+
+.journal-entry__image {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.journal-entry__name {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.journal-entry__caption {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.journal-entry__remove {
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.journey-journal__generate {
+  margin-top: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem;
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.journey-journal__itinerary {
+  margin-top: 1rem;
+}
+
+.journey-journal__itinerary ol {
+  padding-left: 1.2rem;
+}

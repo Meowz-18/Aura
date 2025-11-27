@@ -1,0 +1,75 @@
+.filter-chips {
+  background: rgba(10, 14, 23, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 1.5rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__clear {
+    background: none;
+    border: none;
+    color: #99e2ff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+      color: #d0f3ff;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+.filter-chip {
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f5f7ff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.25s ease;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.35);
+    outline: none;
+  }
+
+  &--active {
+    background: linear-gradient(135deg, #44ffa1, #06adb5);
+    border-color: transparent;
+    color: #061d2f;
+    box-shadow: 0 8px 16px rgba(6, 255, 165, 0.25);
+  }
+
+  &__icon {
+    font-size: 1.1rem;
+  }
+
+  &__label {
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,46 @@
+.shareable-postcard {
+  margin-top: 1rem;
+}
+
+.postcard-button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.postcard-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.postcard-modal__content {
+  position: relative;
+  background: rgba(4, 8, 14, 0.95);
+  border-radius: 18px;
+  padding: 1.2rem;
+  width: min(420px, 90vw);
+}
+
+.postcard-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.postcard-preview {
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
