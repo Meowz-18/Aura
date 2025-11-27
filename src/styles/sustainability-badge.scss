@@ -1,0 +1,27 @@
+.sustainability-badge {
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(40, 167, 69, 0.15);
+  border: 1px solid rgba(40, 167, 69, 0.4);
+}
+
+.sustainability-badge__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sustainability-badge__icon {
+  font-size: 1.4rem;
+}
+
+.sustainability-badge__title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.sustainability-badge__list {
+  margin: 0.6rem 0 0;
+  padding-left: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+}

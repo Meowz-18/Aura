@@ -1,0 +1,34 @@
+.view-toggle {
+  display: inline-flex;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.25rem;
+  gap: 0.4rem;
+}
+
+.view-toggle__button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 0.8rem;
+  background: transparent;
+  color: #f8fbff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  svg {
+    opacity: 0.8;
+  }
+
+  &--active {
+    background: #ffffff;
+    color: #081320;
+    svg {
+      color: #081320;
+    }
+  }
+}

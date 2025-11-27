@@ -1,0 +1,19 @@
+.weather-chip {
+  border-radius: 16px;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.weather-chip__month {
+  font-weight: 600;
+}
+
+.weather-chip__temp {
+  margin-top: 0.3rem;
+}
+
+.weather-chip__conditions {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}

@@ -6,6 +6,7 @@ const GlobeScene = lazy(() => import('./routes/GlobeScene'))
 const IndiaScene = lazy(() => import('./routes/IndiaScene'))
 const StateScene = lazy(() => import('./routes/StateScene'))
 const DistrictScene = lazy(() => import('./routes/DistrictScene'))
+const AttractionDetail = lazy(() => import('./routes/AttractionDetail'))
 
 const SceneFallback = () => (
   <section className="surface-card" data-animate="fade">
@@ -24,6 +25,7 @@ function App() {
           <Route path="/india" element={<IndiaScene />} />
           <Route path="/india/:stateId" element={<StateScene />} />
           <Route path="/india/:stateId/:districtId" element={<DistrictScene />} />
+          <Route path="/india/:stateId/:districtId/:attractionId" element={<AttractionDetail />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>

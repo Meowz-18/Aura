@@ -7,6 +7,7 @@ import { useScrollProgress } from '../../hooks/useScrollProgress'
 import { useViewportBreakpoints } from '../../hooks/useViewportBreakpoints'
 import { useCinematicIntro } from '../../hooks/useCinematicIntro'
 import { SceneHUD } from '../scene/SceneHUD'
+import { JourneyJournal } from '../extras/JourneyJournal'
 
 interface SceneLayoutProps {
   children: ReactNode
@@ -25,6 +26,7 @@ export const SceneLayout = ({ children }: SceneLayoutProps) => {
       <ProgressBar value={progress} />
       <Header breakpointLabel={label} />
       <SceneHUD />
+      <JourneyJournal />
       <main id="main-content" className="scene-shell" tabIndex={-1}>
         {children}
       </main>
